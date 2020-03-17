@@ -13,7 +13,9 @@ public class DancerService {
 	DancerRepository db;
 	
 	public Dancer registerDancer(Dancer dancer) {
-		return db.save(dancer);
+		System.err.println(dancer);
+		Dancer save = db.save(dancer);
+		return save; 
 	}
 	
 	public List<Dancer> getAllDancers() {
